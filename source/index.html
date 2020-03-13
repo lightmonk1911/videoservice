@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Мишка</title>
+  <title>Видеосервис</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.min.css">
@@ -12,7 +12,7 @@
 
   <header class="head">
     <div class="head__logo">
-      <img src="img/logo.png" alt="" class="logo" height="36">
+      <img src="img/logo.svg" alt="" class="logo" height="36">
       <p>Видеосервис</p>
     </div>
     <div class="head__search">
@@ -23,52 +23,115 @@
   </header>
 
   <main class="content">
-    <div class="content__tab">
-      <h1>Фильмы</h1>
-      <h1>Телеканалы</h1>
+    <div class="content__btn">
+      <button class="tablinks" onclick="tabs(event,'Films')" id="defaultOpen"><h1>Фильмы</h1></button>
+      <button class="tablinks" onclick="tabs(event,'TvProgram')"><h1>Телеканалы</h1></button>
     </div>
-    <div class="content__news">
-      <h2>Новинки</h2>
-      <div class="content__new-items">
-        <div class="item">
-          <img src="img/image-1.png" alt="">
-          <h3>Мульт в кино. Выпуск №103. Некогда грустить!</h3>
-        </div>
-        <div class="item">
-          <img src="img/image-2.png" alt="">
-          <h3>Новый Бэтмен</h3>
-        </div>
-        <div class="item">
-          <img src="img/image-3.png" alt="">
-          <h3>Однажды... в Голливуде</h3>
-        </div>
-        <div class="item">
-          <img src="img/image-4.png" alt="">
-          <h3>Стриптизёрши</h3>
+    <section id="Films" class="tabcontent">
+      <div class="content__news">
+        <h2><img src="img/icon-fire.svg" alt="" width="20">Новинки</h2>
+        <div class="content__new-items">
+          <div class="item">
+            <img src="img/image-1.png" alt="">
+            <h3>Мульт в кино. Выпуск №103. Некогда грустить!</h3>
+          </div>
+          <div class="item">
+            <img src="img/image-2.png" alt="">
+            <h3>Новый Бэтмен</h3>
+          </div>
+          <div class="item">
+            <img src="img/image-3.png" alt="">
+            <h3>Однажды... в Голливуде</h3>
+          </div>
+          <div class="item">
+            <img src="img/image-4.png" alt="">
+            <h3>Стриптизёрши</h3>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="content__genres">
-      <h2>Жанры</h2>
-      <div class="content__genres-items">
-        <div class="item-1 item">
-          <h4>Комедии</h4>
-        </div>
-        <div class="item-2 item">
-          <h4>Драмы</h4>
-        </div>
-        <div class="item-3 item">
-          <h4>Фантастика</h4>
-        </div>
-        <div class="item-4 item">
-          <h4>Ужасы</h4>
+      <div class="content__genres">
+        <h2>Жанры</h2>
+        <div class="content__genres-items">
+          <div class="item-1 item">
+            <img src="img/icon-comedy.svg" alt="">
+            <h4>Комедии</h4>
+          </div>
+          <div class="item-2 item">
+            <img src="img/icon-drama.svg" alt="">
+            <h4>Драмы</h4>
+          </div>
+          <div class="item-3 item">
+            <img src="img/icon-fantastic.svg" alt="">
+            <h4>Фантастика</h4>
+          </div>
+          <div class="item-4 item">
+            <img src="img/icon-horror.svg" alt="">
+            <h4>Ужасы</h4>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+    <section id="TvProgram" class="tabcontent">
+      <div class="content__tv">
+        <div class="tv-item">
+          <div class="tv-item__channel">
+            <img src="img/first.svg" alt="">
+          </div>
+          <div class="tv-item__program">
+            <h2>Первый канал</h2>
+            <p class="prog active"><span>13:00</span>Новости (с субтитрами)</p>
+            <p class="prog"><span>14:00</span>Давай поженимся</p>
+            <p class="prog"><span>15:00</span>Другие новости</p>
+          </div>
+        </div>
+        <div class="tv-item">
+          <div class="tv-item__channel">
+            <img src="img/2x2.svg" alt="">
+          </div>
+          <div class="tv-item__program">
+            <h2>2x2</h2>
+            <p class="prog active"><span>13:00</span>МУЛЬТ ТВ. Сезон 4, 7 серия</p>
+            <p class="prog"><span>14:00</span>ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</p>
+            <p class="prog"><span>15:00</span>БУРДАШЕВ. Сезон 1, 20 серия</p>
+          </div>
+        </div>
+        <div class="tv-item">
+          <div class="tv-item__channel">
+            <img src="img/rbc.svg" alt="">
+          </div>
+          <div class="tv-item__program">
+            <h2>РБК</h2>
+            <p class="prog active"><span>13:00</span>ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС</p>
+            <p class="prog"><span>14:00</span>ДЕНЬ. Главные темы</p>
+            <p class="prog"><span>15:00</span>Главные новости</p>
+          </div>
+        </div>
+        <div class="tv-item">
+          <div class="tv-item__channel">
+            <img src="img/amedia.svg" alt="">
+          </div>
+          <div class="tv-item__program">
+            <h2>AMEDIA PREMIUM</h2>
+            <p class="prog active"><span>13:00</span>Клиент всегда мёртв</p>
+            <p class="prog"><span>14:00</span>Голодные игры: Сойка-пересмешница. Часть I</p>
+            <p class="prog"><span>15:00</span>Секс в большом городе</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
-
+    <div class="footer">
+      <div>
+        <img class="footer__logo" height="64" src="img/htc-cs-logo.svg" alt="">
+      </div>
+      <div>
+        <p>426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</p>
+        <p>+7 (3412) 93-88-61, 43-29-29</p>
+        <p><a href="https://htc-cs.ru/">htc-cs.ru</a></p>
+      </div>
+    </div>
   </footer>
 
 
