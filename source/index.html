@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="js/script.js"></script>
 
 </head>
 <body>
@@ -19,7 +24,22 @@
       <input class="head__input" type="search" name="search" placeholder="Поиск...">
       <button class="head__btn">Найти</button>
     </div>
-    <button class="head__login">Войти</button>
+    <button class="login-btn" type="button">Войти</button>
+    <div class="login">
+      <div class="login__form">
+        <h2>Вход</h2>
+        <fieldset>
+          <input id="username" placeholder="Логин" autofocus="" required="" type="text">
+          <input id="password" placeholder="Пароль" required="" type="password">
+        </fieldset>
+        <label class="container">Запомнить
+          <input type="checkbox" class="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <button class="log-btn" type="submit">Войти</button>
+
+      </div>
+    </div>
   </header>
 
   <main class="content">
@@ -32,92 +52,141 @@
         <h2><img src="img/icon-fire.svg" alt="" width="20">Новинки</h2>
         <div class="content__new-items">
           <div class="item">
-            <img src="img/image-1.png" alt="">
+            <a href="#">
+              <div class="item__img">
+                <img src="img/image-1.png" alt="">
+                <div class="item__hover">
+                  Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века».
+                </div>
+              </div>
             <h3>Мульт в кино. Выпуск №103. Некогда грустить!</h3>
+            </a>
           </div>
           <div class="item">
-            <img src="img/image-2.png" alt="">
-            <h3>Новый Бэтмен</h3>
+            <a href="#">
+              <div class="item__img">
+                <img src="img/image-2.png" alt="">
+                <div class="item__hover">
+                  Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон
+                </div>
+              </div>
+              <h3>Новый Бэтмен</h3>
+            </a>
           </div>
           <div class="item">
-            <img src="img/image-3.png" alt="">
-            <h3>Однажды... в Голливуде</h3>
+            <a href="#">
+              <div class="item__img">
+                <img src="img/image-3.png" alt="">
+                <div class="item__hover">
+                  Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место
+                </div>
+              </div>
+              <h3>Однажды... в Голливуде</h3>
+            </a>
           </div>
           <div class="item">
-            <img src="img/image-4.png" alt="">
-            <h3>Стриптизёрши</h3>
+            <a href="#">
+              <div class="item__img">
+                <img src="img/image-4.png" alt="">
+                <div class="item__hover">
+                  Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.
+                </div>
+              </div>
+              <h3>Стриптизёрши</h3>
+            </a>
           </div>
         </div>
       </div>
       <div class="content__genres">
         <h2>Жанры</h2>
         <div class="content__genres-items">
-          <div class="item-1 item">
-            <img src="img/icon-comedy.svg" alt="">
-            <h4>Комедии</h4>
-          </div>
-          <div class="item-2 item">
-            <img src="img/icon-drama.svg" alt="">
-            <h4>Драмы</h4>
-          </div>
-          <div class="item-3 item">
-            <img src="img/icon-fantastic.svg" alt="">
-            <h4>Фантастика</h4>
-          </div>
-          <div class="item-4 item">
-            <img src="img/icon-horror.svg" alt="">
-            <h4>Ужасы</h4>
-          </div>
+          <a href="#">
+            <div class="item-1 item">
+              <img src="img/icon-comedy.svg" alt="">
+              <h4>Комедии</h4>
+            </div>
+          </a>
+          <a href="#">
+            <div class="item-2 item">
+              <img src="img/icon-drama.svg" alt="">
+              <h4>Драмы</h4>
+            </div>
+          </a>
+          <a href="#">
+            <div class="item-3 item">
+              <img src="img/icon-fantastic.svg" alt="">
+              <h4>Фантастика</h4>
+            </div>
+          </a>
+          <a href="#">
+            <div class="item-4 item">
+              <img src="img/icon-horror.svg" alt="">
+              <h4>Ужасы</h4>
+            </div>
+          </a>
         </div>
       </div>
     </section>
     <section id="TvProgram" class="tabcontent">
-      <div class="content__tv">
-        <div class="tv-item">
-          <div class="tv-item__channel">
-            <img src="img/first.svg" alt="">
+
+        <div class="content__tv">
+          <div class="tv-item">
+            <div class="tv-item__channel">
+              <img src="img/first.svg" alt="">
+            </div>
+            <div class="tv-item__program">
+              <h2>Первый канал</h2>
+              <p class="prog active"><span>13:00</span>Новости (с субтитрами)</p>
+              <p class="prog"><span>14:00</span>Давай поженимся</p>
+              <p class="prog"><span>15:00</span>Другие новости</p>
+            </div>
           </div>
-          <div class="tv-item__program">
-            <h2>Первый канал</h2>
-            <p class="prog active"><span>13:00</span>Новости (с субтитрами)</p>
-            <p class="prog"><span>14:00</span>Давай поженимся</p>
-            <p class="prog"><span>15:00</span>Другие новости</p>
+          <div class="tv-item">
+            <div class="tv-item__channel">
+              <img src="img/2x2.svg" alt="">
+            </div>
+            <div class="tv-item__program">
+              <h2>2x2</h2>
+              <p class="prog active"><span>13:00</span>МУЛЬТ ТВ. Сезон 4, 7 серия</p>
+              <p class="prog"><span>14:00</span>ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</p>
+              <p class="prog"><span>15:00</span>БУРДАШЕВ. Сезон 1, 20 серия</p>
+            </div>
+          </div>
+          <div class="tv-item">
+            <div class="tv-item__channel">
+              <img src="img/rbc.svg" alt="">
+            </div>
+            <div class="tv-item__program">
+              <h2>РБК</h2>
+              <p class="prog active"><span>13:00</span>ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС</p>
+              <p class="prog"><span>14:00</span>ДЕНЬ. Главные темы</p>
+              <p class="prog"><span>15:00</span>Главные новости</p>
+            </div>
+          </div>
+          <div class="tv-item">
+            <div class="tv-item__channel">
+              <img src="img/amedia.svg" alt="">
+            </div>
+            <div class="tv-item__program">
+              <h2>AMEDIA PREMIUM</h2>
+              <p class="prog active"><span>13:00</span>Клиент всегда мёртв</p>
+              <p class="prog"><span>14:00</span>Голодные игры: Сойка-пересмешница. Часть I</p>
+              <p class="prog"><span>15:00</span>Секс в большом городе</p>
+            </div>
+          </div>
+          <div class="tv-item">
+            <div class="tv-item__channel">
+              <img src="img/amedia.svg" alt="">
+            </div>
+            <div class="tv-item__program">
+              <h2>AMEDIA PREMIUM</h2>
+              <p class="prog active"><span>13:00</span>Клиент всегда мёртв</p>
+              <p class="prog"><span>14:00</span>Голодные игры: Сойка-пересмешница. Часть I</p>
+              <p class="prog"><span>15:00</span>Секс в большом городе</p>
+            </div>
           </div>
         </div>
-        <div class="tv-item">
-          <div class="tv-item__channel">
-            <img src="img/2x2.svg" alt="">
-          </div>
-          <div class="tv-item__program">
-            <h2>2x2</h2>
-            <p class="prog active"><span>13:00</span>МУЛЬТ ТВ. Сезон 4, 7 серия</p>
-            <p class="prog"><span>14:00</span>ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</p>
-            <p class="prog"><span>15:00</span>БУРДАШЕВ. Сезон 1, 20 серия</p>
-          </div>
-        </div>
-        <div class="tv-item">
-          <div class="tv-item__channel">
-            <img src="img/rbc.svg" alt="">
-          </div>
-          <div class="tv-item__program">
-            <h2>РБК</h2>
-            <p class="prog active"><span>13:00</span>ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС</p>
-            <p class="prog"><span>14:00</span>ДЕНЬ. Главные темы</p>
-            <p class="prog"><span>15:00</span>Главные новости</p>
-          </div>
-        </div>
-        <div class="tv-item">
-          <div class="tv-item__channel">
-            <img src="img/amedia.svg" alt="">
-          </div>
-          <div class="tv-item__program">
-            <h2>AMEDIA PREMIUM</h2>
-            <p class="prog active"><span>13:00</span>Клиент всегда мёртв</p>
-            <p class="prog"><span>14:00</span>Голодные игры: Сойка-пересмешница. Часть I</p>
-            <p class="prog"><span>15:00</span>Секс в большом городе</p>
-          </div>
-        </div>
-      </div>
+
     </section>
   </main>
 

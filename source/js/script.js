@@ -13,3 +13,37 @@ function tabs(evt, typeTab) {
 }
 
 document.getElementById("defaultOpen").click();
+
+
+(function($){
+  $(window).on("load",function(){
+      $(".content__tv").mCustomScrollbar();
+  });
+})(jQuery);
+
+$(".content__tv").mCustomScrollbar({
+  axis: 'y',
+  theme: 'inset-2-dark',
+  scrollInertia: '330',
+  mouseWheel: {
+      deltaFactor: 50
+  }
+});
+
+
+var modal = document.querySelector(".login");
+var btn = document.querySelector(".login-btn");
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+window.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
