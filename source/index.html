@@ -16,14 +16,14 @@
 <body>
 
   <header class="head">
-    <div class="head__logo">
+    <a href="#" class="head__logo">
       <img src="img/logo.svg" alt="" class="logo" height="36">
       <p>Видеосервис</p>
-    </div>
-    <div class="head__search">
+    </a>
+    <form action="" method="get" class="head__search">
       <input class="head__input" type="search" name="search" placeholder="Поиск...">
-      <button class="head__btn">Найти</button>
-    </div>
+      <button class="head__btn" type="submit">Найти</button>
+    </form>
     <button class="login-btn" type="button">Войти</button>
     <div class="login">
       <div class="login__form">
@@ -48,9 +48,9 @@
       <button class="tablinks" onclick="tabs(event,'TvProgram')"><h1>Телеканалы</h1></button>
     </div>
     <section id="Films" class="tabcontent">
-      <div class="content__news">
+      <div class="news">
         <h2><img src="img/icon-fire.svg" alt="" width="20">Новинки</h2>
-        <div class="content__new-items">
+        <div class="news__items">
           <div class="item">
             <a href="#">
               <div class="item__img">
@@ -97,9 +97,9 @@
           </div>
         </div>
       </div>
-      <div class="content__genres">
+      <div class="genres">
         <h2>Жанры</h2>
-        <div class="content__genres-items">
+        <div class="genres__items">
           <a href="#">
             <div class="item-1 item">
               <img src="img/icon-comedy.svg" alt="">
@@ -128,8 +128,7 @@
       </div>
     </section>
     <section id="TvProgram" class="tabcontent">
-
-        <div class="content__tv">
+        <div class="tv">
           <div class="tv-item">
             <div class="tv-item__channel">
               <img src="img/first.svg" alt="">
@@ -186,7 +185,6 @@
             </div>
           </div>
         </div>
-
     </section>
   </main>
 

@@ -1,0 +1,43 @@
+/** content.less **/
+
+.content {
+  width: 320px;
+  margin: 0 auto;
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+
+    .tablinks {
+      background: none;
+      border: none;
+      outline: none;
+      margin: 40px 12px 16px 12px;
+      padding: 0;
+    }
+
+    button.active {
+      color: @main-red;
+      border-bottom: 2px solid @main-red;
+    }
+
+    h1{
+      .font(28px; 600; 42px);
+      font-family: 'Rubik', 'Arial', sans-serif;
+      margin: 0;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .content {
+    width: 668px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .content {
+    width: 1180px;
+  }
+}

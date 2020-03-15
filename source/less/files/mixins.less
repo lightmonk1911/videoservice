@@ -1,0 +1,29 @@
+.font(@size; @weight; @line-height) {
+  font-size: @size;
+  font-weight: @weight;
+  line-height: @line-height;
+}
+
+.button(@width: 113px; @min-height: 38px;) {
+  width: @width;
+  min-height: @min-height;
+  background: @main-red;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  color: @white-clr;
+  font-family: 'Rubik', 'Arial', sans-serif;
+  .font(16px; 600; 19px);
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Rubik', 'Arial', sans-serif;
+  .font(16px; 400; 16px);
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: @main-dark;
+}

@@ -1,0 +1,86 @@
+/** tv-program.less **/
+
+.tv {
+  width: 340px;
+  height: 696px;
+  margin-top: 15px;
+
+  .tv-item {
+    background: @bg-clr;
+    border-radius: 8px;
+    height: 262px;
+    margin: 16px 0 0 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-around;
+
+    &__channel {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__program {
+
+      h2 {
+        .font(20px; 600; 24px);
+        margin: 17px 0;
+      }
+
+      .active {
+        color: @main-red;
+      }
+
+      p {
+        .font(16px; 400; 19px);
+        margin: 12px 0 0 0;
+
+        span {
+          margin-right: 22px;;
+        }
+      }
+    }
+  }
+
+  .tv-item:first-child {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .tv {
+    width: 688px;
+
+    .tv-item {
+      height: 162px;
+      flex-direction: row;
+      justify-content: end;
+      padding: 0;
+
+      &__channel {
+        width: 150px;
+      }
+
+      &__program {
+
+        p {
+          margin: 12px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .tv {
+    width: 1200px;
+
+    .tv-item {
+
+      &__channel {
+        width: 400px;
+      }
+    }
+  }
+}

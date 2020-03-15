@@ -1,0 +1,94 @@
+/** header.less **/
+.head {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    p {
+      .font(20px; 600; 24px);
+      padding-left: 12px;
+    }
+  }
+
+  &__search {
+    display: flex;
+    padding: 32px 0;
+  }
+
+  &__input {
+    width: 320px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid @main-dark;
+    height: 25px;
+    .font(16px; 600; 19px);
+    font-family: 'Rubik', 'Arial', sans-serif;
+
+    &::placeholder {
+      .font(16px; 400; 19px);
+      color: @plcholder;
+      padding-bottom: 9px;
+      font-family: 'Rubik', 'Arial', sans-serif;
+    }
+  }
+
+  &__btn {
+    background: none;
+    outline: none;
+    border: none;
+    font-family: 'Rubik', 'Arial', sans-serif;
+    .font(16px; 600; 19px);
+    color: @main-red;
+    cursor: pointer;
+  }
+
+  .login-btn {
+    .button();
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 40px;
+    padding-top: 32px;
+    width: 668px;
+
+    &__search {
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+
+    &__input {
+      width: 160px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .head {
+    width: 1180px;
+
+    &__search {
+      display: flex;
+      align-items: center;
+      padding-right: 34px;
+    }
+
+    &__input {
+      width: 320px;
+    }
+
+    &__btn {
+      padding: 0 0 0 30px;
+    }
+  }
+}

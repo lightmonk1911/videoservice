@@ -17,11 +17,11 @@ document.getElementById("defaultOpen").click();
 
 (function($){
   $(window).on("load",function(){
-      $(".content__tv").mCustomScrollbar();
+      $(".tv").mCustomScrollbar();
   });
 })(jQuery);
 
-$(".content__tv").mCustomScrollbar({
+$(".tv").mCustomScrollbar({
   axis: 'y',
   theme: 'inset-2-dark',
   scrollInertia: '330',
