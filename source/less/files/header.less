@@ -47,6 +47,29 @@
     cursor: pointer;
   }
 
+  .user {
+    display: flex;
+    align-items: center;
+    width: 182px;
+    justify-content: flex-end;
+
+    p {
+      .font(16px; 600; 19px);
+      padding-right: 10px;
+    }
+  }
+
+  .logout {
+    display: none;
+    background: none;
+    outline: none;
+    border: none;
+    font-family: 'Rubik', 'Arial', sans-serif;
+    .font(16px; 600; 19px);
+    color: @main-red;
+    cursor: pointer;
+  }
+
   .login-btn {
     .button();
   }
@@ -80,7 +103,6 @@
     &__search {
       display: flex;
       align-items: center;
-      padding-right: 34px;
     }
 
     &__input {

@@ -47,3 +47,28 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+var logout = document.querySelector(".logout");
+
+document.getElementById('entry').onclick = function () {
+	let username = document.getElementById('username').value;
+	let password = document.getElementById('password').value;
+	let out = document.getElementById('out');
+
+	if (username === 'kostya' && password === '12345') {
+    out.innerHTML = 'Константин К.';
+    btn.style.display = "none";
+    modal.style.display = "none";
+    logout.style.display = "block";
+  }
+
+  localStorage.setItem('username', username.value);
+  localStorage.setItem('password', password.value);
+}
+
+
+
+
+logout.onclick = function() {
+  location.reload();
+}
