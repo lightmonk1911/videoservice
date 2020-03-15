@@ -6,4 +6,4 @@
 
 # Run
 
-* To run app: `npm start`
+* To run app: `gulp start`
