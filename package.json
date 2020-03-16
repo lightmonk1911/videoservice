@@ -2,7 +2,7 @@
   "name": "testproject",
   "version": "1.0.0",
   "private": true,
-  "description": "Личный проект «Мишка» от HTML Academy",
+  "description": "Видеосервис",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "browser-sync": "^2.26.7",
@@ -40,14 +40,14 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IvanSabV/mishka.git"
+    "url": "git+https://github.com/IvanSabV/video.git"
   },
   "author": "IvanSabV",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/IvanSabV/mishka/issues"
+    "url": "https://github.com/IvanSabV/video/issues"
   },
-  "homepage": "https://github.com/IvanSabV/mishka#readme",
+  "homepage": "https://github.com/IvanSabV/video#readme",
   "dependencies": {
     "imagemin-jpegtran": "^6.0.0",
     "imagemin-optipng": "^7.1.0",
