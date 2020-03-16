@@ -24,9 +24,9 @@ document.getElementById("defaultOpen").click();
 $(".tv").mCustomScrollbar({
   axis: 'y',
   theme: 'inset-2-dark',
-  scrollInertia: '330',
+  scrollInertia: '1500',
   mouseWheel: {
-      deltaFactor: 50
+      deltaFactor: 80
   }
 });
 
@@ -48,7 +48,9 @@ window.onclick = function(event) {
     }
 }
 
+
 var logout = document.querySelector(".logout");
+var userhide = document.querySelector('.user-hide');
 
 document.getElementById('entry').onclick = function () {
 	let username = document.getElementById('username').value;
@@ -62,13 +64,26 @@ document.getElementById('entry').onclick = function () {
     logout.style.display = "block";
   }
 
-  localStorage.setItem('username', username.value);
-  localStorage.setItem('password', password.value);
+	var serialObj1 = JSON.stringify(username);
+	var serialObj2 = JSON.stringify(password);
+
+  localStorage.setItem('username', serialObj1);
+  localStorage.setItem('password', serialObj2);
+  userhide.style.display = (userhide.style.display == 'inherit') ? '' : 'inherit';
+  localStorage.setItem('hide', userhide.style.display);
+
+	var returnObj1 = JSON.parse(localStorage.getItem('username'))
+	var returnObj2 = JSON.parse(localStorage.getItem('password'))
 }
 
-
-
+if(localStorage.getItem('hide') == 'inherit') {
+  document.querySelector('.user-hide').style.display = 'inherit';
+  out.innerHTML = 'Константин К.';
+  btn.style.display = "none";
+  logout.style.display = "block";
+}
 
 logout.onclick = function() {
   location.reload();
+  localStorage.clear();
 }

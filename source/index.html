@@ -11,7 +11,6 @@
   <script src="js/jquery-ui.js"></script>
   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="js/script.js"></script>
-
 </head>
 <body>
 
@@ -25,9 +24,10 @@
       <button class="head__btn" type="submit">Найти</button>
     </form>
     <div class="user">
-      <p id="out"></p>
-      <button class="logout" type="button">Выйти</button>
-
+      <div class="user-hide">
+        <p id="out"></p>
+        <button class="logout" type="button">Выйти</button>
+      </div>
     <button class="login-btn" type="button">Войти</button>
     </div>
     <div class="login">
@@ -49,10 +49,10 @@
 
   <main class="content">
     <div class="content__btn">
-      <button class="tablinks" onclick="tabs(event,'Films')" id="defaultOpen"><h1>Фильмы</h1></button>
-      <button class="tablinks" onclick="tabs(event,'TvProgram')"><h1>Телеканалы</h1></button>
+      <button class="tablinks" onclick="tabs(event,'films')" id="defaultOpen"><h1>Фильмы</h1></button>
+      <button class="tablinks" onclick="tabs(event,'tvprogram')"><h1>Телеканалы</h1></button>
     </div>
-    <section id="Films" class="tabcontent">
+    <section id="films" class="tabcontent">
       <div class="news">
         <h2><img src="img/icon-fire.svg" alt="" width="20">Новинки</h2>
         <div class="news__items">
@@ -132,7 +132,7 @@
         </div>
       </div>
     </section>
-    <section id="TvProgram" class="tabcontent">
+    <section id="tvprogram" class="tabcontent">
         <div class="tv">
           <div class="tv-item">
             <div class="tv-item__channel">
@@ -205,8 +205,6 @@
       </div>
     </div>
   </footer>
-
-
 
   <script src="js/script.js"></script>
   <script src="js/picturefill.js"></script>
