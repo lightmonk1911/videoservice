@@ -19,7 +19,7 @@
       <img src="img/logo.svg" alt="" class="logo" height="36">
       <p>Видеосервис</p>
     </a>
-    <form action="" method="get" class="head__search">
+    <form action="#" method="get" class="head__search">
       <input class="head__input" type="search" name="search" placeholder="Поиск...">
       <button class="head__btn" type="submit">Найти</button>
     </form>
@@ -48,10 +48,10 @@
   </header>
 
   <main class="content">
-    <div class="content__btn">
-      <button class="tablinks" onclick="tabs(event,'films')" id="defaultOpen"><h1>Фильмы</h1></button>
-      <button class="tablinks" onclick="tabs(event,'tvprogram')"><h1>Телеканалы</h1></button>
-    </div>
+    <nav class="content__nav">
+      <a class="tablinks" onclick="tabs(event,'films')" id="defaultOpen"><h1>Фильмы</h1></a>
+      <a class="tablinks" onclick="tabs(event,'tvprogram')"><h1>Телеканалы</h1></a>
+    </nav>
     <section id="films" class="tabcontent">
       <div class="news">
         <h2><img src="img/icon-fire.svg" alt="" width="20">Новинки</h2>
